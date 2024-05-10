@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mind read guess number</title>
+    <style>
+        .container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .Wrap-value {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn:active {
+            background-color: #004080;
+            /* Active/focus background color */
+        }
+
+
+        .container1 {
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+        }
+
+        .input-container {
+            text-align: center;
+            width: 200px;
+            /* Set the width of the box */
+            height: 0px;
+            /* Set the height of the box */
+            border: 2px solid #000;
+            /* Set the border with a solid black color */
+            padding: 10px 0px;
+            /* Add padding inside the box */
+            box-sizing: border-box;
+            /* Include border and padding in the box's total width and height */
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .container3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            /* Adjust height as needed for parent container */
+            /* Border for visualization */
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ccc;
+            text-align: center;
+            /* Example background color */
+        }
+
+        .h3page {
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        @media screen and (max-width: 435px) {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .h3page {
+                font-size: 15px;
+                font-weight: 100;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mind read Guess Number</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="Wrap-value">
+            <div>
+                <h3 class="h3page">which table have the value click the button</h3>
+            </div>
+            <div>
+                <button class="btn" id="buttonA" onclick="calculater(1)">A</button>
+                <button class="btn" id="buttonB" onclick="calculater(2)">B</button>
+                <button class="btn" id="buttonC" onclick="calculater(4)">C</button>
+                <button class="btn" id="buttonD" onclick="calculater(8)">D</button>
+            </div>
+        </div>
+        <div class="container1">
+            <button class="button" id="submitButton" onclick="submitValue()">Submit</button>
+            <button class="button" onclick="clearbtn()">Clear</button>
+        </div>
+        <div class="container3">
+            <h3>Answer Show</h3>
+            <div class="box">
+                <p id="display"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var totalValue = 0;
+
+    function calculater(val) {
+        totalValue += val;
+    }
+
+    function clearbtn() {
+        totalValue = 0;
+        document.getElementById("display").textContent = "";
+        document.getElementById('buttonA').style.backgroundColor = '#007bff';
+        document.getElementById('buttonB').style.backgroundColor = '#007bff';
+        document.getElementById('buttonC').style.backgroundColor = '#007bff';
+        document.getElementById('buttonD').style.backgroundColor = '#007bff';
+
+        document.getElementById('submitButton').style.backgroundColor = '#007bff';
+    }
+
+    function submitValue() {
+        document.getElementById('buttonA').style.backgroundColor = '#007bff';
+        document.getElementById('buttonB').style.backgroundColor = '#007bff';
+        document.getElementById('buttonC').style.backgroundColor = '#007bff';
+        document.getElementById('buttonD').style.backgroundColor = '#007bff';
+
+        document.getElementById("display").textContent = totalValue;
+    }
+
+
+    const buttonA = document.getElementById('buttonA');
+    const buttonB = document.getElementById('buttonB');
+    const buttonC = document.getElementById('buttonC');
+    const buttonD = document.getElementById('buttonD');
+    const submitButton = document.getElementById('submitButton');
+
+    buttonA.addEventListener('click', changeButtonColorA);
+    buttonB.addEventListener('click', changeButtonColorB);
+    buttonC.addEventListener('click', changeButtonColorC);
+    buttonD.addEventListener('click', changeButtonColorD);
+    submitButton.addEventListener('click', changeButtonColor);
+
+    function changeButtonColorA(event) {
+        // Reset background color of all buttons
+        buttonA.style.backgroundColor = '#007bff';
+        // buttonB.style.backgroundColor = '#007bff';
+        // buttonC.style.backgroundColor = '#007bff';
+        // buttonD.style.backgroundColor = '#007bff';
+        // submitButton.style.backgroundColor = '#007bff';
+
+        // Change background color of clicked button
+        event.target.style.backgroundColor = '#28a745'; // New background color
+    }
+
+    function changeButtonColorB(event) {
+        buttonB.style.backgroundColor = '#007bff';
+        event.target.style.backgroundColor = '#28a745';
+    }
+    function changeButtonColorC(event) {
+        buttonC.style.backgroundColor = '#007bff';
+        event.target.style.backgroundColor = '#28a745';
+    }
+    function changeButtonColorD(event) {
+        buttonD.style.backgroundColor = '#007bff';
+        event.target.style.backgroundColor = '#28a745';
+    }
+    function changeButtonColor(event) {
+        submitButton.style.backgroundColor = '#007bff';
+        event.target.style.backgroundColor = '#28a745';
+    }
+
+</script>
+
+</html>
