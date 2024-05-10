@@ -1,0 +1,189 @@
+.titlesign{
+   display: flex;
+   flex-direction: row;
+   margin: 20px 120px 0px 120px;
+   gap: 100px;
+   max-width: 100%;   
+   border-radius: 20px;
+}
+
+.imagepage{
+    max-width: 370px;
+    border-radius: 20px;
+    
+}
+.fullitem{
+    margin-bottom: 10px;
+}
+
+.btnlink{
+    text-decoration: none;
+    color: white;
+}
+
+.btnlink:hover{
+    color: rgba(255, 255, 255, 0.701);
+}
+
+.titlesignin{
+    font-size: 15px;
+    margin-top: 20px;
+    position: absolute;
+    right: 140px;
+}
+
+.titlesignin a{
+    text-decoration: none;
+}
+.titlesignin a:hover{
+    color: blue;
+}
+
+.titleitem{
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 60px;
+}
+
+.titleitem h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.nameitem{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nameitem1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+.nameitem1 label{
+    font-size: 15px;
+    font-weight: 700;
+}
+.nameitem1 input{
+    text-decoration: none;
+    border: none;
+    background-color: rgb(230, 226, 226);
+    padding: 10px;
+}
+
+.nameitem2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+.nameitem2 label{
+    font-size: 15px;
+    font-weight: 700;
+}
+.nameitem2 input{
+    text-decoration: none;
+    border: none;
+    background-color: rgb(230, 226, 226);
+    padding: 10px;
+    max-width: 375px;
+}
+
+.checkitem{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 10px 0px;
+}
+.checkitem input{
+    height: 15px;
+    width: 15px;
+}
+.checkitem p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.checkitem p span{
+    color: blue;
+}
+
+.btnitem{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(234, 34, 180);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.btnitem:hover{
+    background-color: rgb(233, 9, 174);
+    color: rgba(255, 255, 255, 0.686);
+}
+
+.titleend{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.titleend span{
+    color: blue;
+}
+
+@media screen and (max-width: 400px){
+    .imagepage{
+    display: none;   
+    }
+
+    .titlesign{
+   display: flex;
+   flex-direction: row;
+   margin: 0px 10px 0px 10px;
+   gap: 0px;
+   max-width: 100%;   
+   border-radius: 20px;
+}
+.nameitem{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.nameitem1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    margin-top: 0px;
+}
+.titleitem h1{
+    font-size: 18px;
+    font-weight: 800;
+}
+.titlesignin{
+    font-size: 15px;
+    margin-top: 20px;
+    position: absolute;
+    right: 5px;
+}
+.titleitem{
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+.btnitem{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(234, 34, 180);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+}
