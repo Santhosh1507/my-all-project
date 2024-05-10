@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    width: 400px;
+    height: 330px;
+    background-color: #666;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 430px){
+    .container{
+        width: 320px;
+        height: 320px;
+        background-color: #666;
+        border-radius: 7px;
+        color: white;
+        text-align: center;
+        padding: 5px;
+    }
+    .title{
+        font-size: 12px;
+    }
+
+    input[name="passwordBox"]{
+        padding: 10px;
+        width: 90%;
+        margin: 20px auto;
+        font-size: 10px;
+        text-align: center;
+    } 
+
+    .lengthBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3px;
+    } 
+    .lengthBox input{
+        width:90%;
+        font-size: 10px;
+    }
+}
+
+
+input[name="passwordBox"]{
+    padding: 10px;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 17.5px;
+    text-align: center;
+}
+
+.lengthBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lengthBox input{
+    width:90%;
+}
+
+.optionsBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.optionsBox input{
+    margin: 0 5px;
+}
+
+.optionsBox label{
+    margin: 0 15px 0 0 ;
+}
+
+input[type="button"]{
+    border:none;
+    padding: 10px;
+    width: 90%;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+
+input[value="Clear"]{
+    width: 40%;
+    margin-top: 10px;
+}
+input[value="Copy"]{
+    width: 40%;
+    margin-top: 10px;
+
+}
+.extraBtns{
+    display: flex;
+    justify-content: space-around;
+    
+}
